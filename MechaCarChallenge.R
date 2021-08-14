@@ -21,3 +21,14 @@ total_summary
 lot_summary <- suspension_coil_df %>% group_by(Manufacturing_Lot) %>%
   summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = 'keep')
 lot_summary
+
+# create a sample table from the suspension coil population
+sample_table <- suspension_coil_df %>% sample_n(50)
+
+# Perform t-test to compare the mean of the PSI across all manufacturing lots 
+# and the population mean
+t.test(sample_table$PSI,mu=1500)
+
+# Perform t-test to compare the mean of the PSI in lot 1 
+# and the population mean
+t.test(sample_table$PSI, mu=1500, subset=sample_table$PSI[sample_table$Manufacturing_Lot=="Lot3"])

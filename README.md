@@ -9,15 +9,35 @@ Below is the output from the multiple linear regression:
 - From our linear regression model, the r-squared value is 0.7149, which means that roughly 71% of the variablilty of our dependent variable (mpg predictions) is explained using this linear model. We can say that this linear model predicts mpg of MechaCar prototypes quite effectively.
 
 ## Summary Statistics on Suspension Coils
-
-Below is the total_summary dataframe of the suspension coil's PSI column:
+- Below is the total_summary dataframe of the suspension coil's PSI column:
 
   ![total summary](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/total_summary_PSI.png)
 
-- According to our results, the variance of the suspension coils in total is approximately 62, which does not exceed the upper limit 100 pounds per square inch of the design specifications. That being said, in total, all manufacturing lots meet this design specification.
-Now let's take a look at the summary by lot of the suspension coil's PSI column:
+  According to our results, the variance of the suspension coils in total is approximately 62, which does not exceed the upper limit 100 pounds per square inch of the design specifications. That being said, in total, all manufacturing lots meet this design specification.
+- Now let's take a look at the summary by lot of the suspension coil's PSI column:
 
  !lot summary](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/lot_summary_PSI.png)
 
-- As shown in the above dataframe, the variances of the suspension coils in lots 1 & 2 are significantly smaller than 100 PSI (0.98 and 7.47, respectively) while that in Lot 3 exceeds the upper limit 100 PSI by about 70%. We can conclude that individually, manufacturing lots 1 and 2 meet the design specification while manufacturing lot 3 fails to do so.
+  As shown in the above dataframe, the variances of the suspension coils in lots 1 & 2 are significantly smaller than 100 PSI (0.98 and 7.47, respectively) while that in Lot 3 exceeds the upper limit 100 PSI by about 70%. We can conclude that individually, manufacturing lots 1 and 2 meet the design specification while manufacturing lot 3 fails to do so.
 
+## T-Tests on Suspension Coils
+- Below is the output for one-sample t-test that compares all manufactoring lots against mean PSI of the population:
+
+  ![PSI_all_lots_t_test](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/PSI_all_lots_t_test.png)
+
+  Our p-value is above our significance level 0.05. Therefore, we do not have sufficient evidence to reject the null hypothesis, and we would state that the two means are statistically similar.
+- Below is the output for one-sample t-test that compares manufactoring lot 1's mean against mean PSI of the population:
+
+  ![PSI_lot1_t_test](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/PSI_lot1_t_test.png)
+
+  Our p-value is below our significance level 0.05. Therefore, we have sufficient evidence to reject the null hypothesis, and we would state that there is a statistical difference between the mean of manufactoring lot 1's PSI and the presumed population mean.
+- Below is the output for one-sample t-test that compares manufactoring lot 2's mean against mean PSI of the population:
+
+  ![PSI_lot2_t_test](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/PSI_lot2_t_test.png)
+
+  Our p-value is below our significance level 0.05. Therefore, we have sufficient evidence to reject the null hypothesis, and we would state that there is a statistical difference between the mean of manufactoring lot 2's PSI and the presumed population mean.
+- Below is the output for one-sample t-test that compares manufactoring lot 3's mean against mean PSI of the population:
+
+  ![PSI_lot3_t_test](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/PSI_lot3_t_test.png)
+
+  Our p-value is above our significance level 0.05. Therefore, we don't have sufficient evidence to reject the null hypothesis, and we would state that there is no statistical difference between the mean of manufactoring lot 3's PSI and the presumed population mean.
