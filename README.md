@@ -16,7 +16,7 @@ Below is the output from the multiple linear regression:
   According to our results, the variance of the suspension coils in total is approximately 62, which does not exceed the upper limit 100 pounds per square inch of the design specifications. That being said, in total, all manufacturing lots meet this design specification.
 - Now let's take a look at the summary by lot of the suspension coil's PSI column:
 
- !lot summary](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/lot_summary_PSI.png)
+ ![lot summary](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/lot_summary_PSI.png)
 
   As shown in the above dataframe, the variances of the suspension coils in lots 1 & 2 are significantly smaller than 100 PSI (0.98 and 7.47, respectively) while that in Lot 3 exceeds the upper limit 100 PSI by about 70%. We can conclude that individually, manufacturing lots 1 and 2 meet the design specification while manufacturing lot 3 fails to do so.
 
