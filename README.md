@@ -41,3 +41,11 @@ Below is the output from the multiple linear regression:
   ![PSI_lot3_t_test](https://github.com/nhipqnguyen/MechaCar_Statistical_Analysis/blob/main/Analyses/PSI_lot3_t_test.png)
 
   Our p-value is above our significance level 0.05. Therefore, we don't have sufficient evidence to reject the null hypothesis, and we would state that there is no statistical difference between the mean of manufactoring lot 3's PSI and the presumed population mean.
+
+## Study Design: MechaCar vs. Competition
+- To compare performance of the MechaCar vehicles against performance of vehicles from other manufactures, we can use mpg fuel efficiency as a success metric.
+- For the test of safety rating:
+  - Null hypothesis: The means of mpg fuel efficiency of all groups are equal.
+  - Alternate hypothesis: At least one of the means is different from all other groups.
+- Since we are testing mpg fuel efficiency (a numerical and continuous dependent variable) across different cars based on vehicle brand (a categorical independent variable), a one-way ANOVA is a good test to use.
+- To perform this ANOVA test, we need to collect mpg data for cars of the same type from MechaCar and its competitors.
